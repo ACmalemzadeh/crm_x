@@ -333,9 +333,9 @@ export function ContactsSection({
                         <div key={lead.id} className="related-item">
                           <div className="related-info">
                             <span className="related-name">Lead #{lead.id}</span>
-                            <span className="related-detail">{lead.stage}</span>
+                            <span className="related-detail">{lead.phase}</span>
                           </div>
-                          <Chip className="small">{lead.stage}</Chip>
+                          <Chip className="small">{lead.phase}</Chip>
                         </div>
                       ))}
                     </div>

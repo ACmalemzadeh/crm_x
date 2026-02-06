@@ -1,4 +1,4 @@
-import type { Sow } from '../../types'
+import type { Sow } from '../types'
 
 export function filterSows(sows: Sow[], searchTerm: string): Sow[] {
   const term = searchTerm.trim().toLowerCase()

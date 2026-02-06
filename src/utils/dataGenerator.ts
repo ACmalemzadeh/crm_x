@@ -25,6 +25,7 @@ export function expandContacts(seedContacts: Contact[], targetCount: number): Co
           id: `e-${i + 1}-1`,
           date: `2026-${String(((i % 12) + 1)).padStart(2, '0')}-${String(((i % 28) + 1)).padStart(2, '0')}`,
           text: 'Initial contact meeting to discuss project requirements.',
+          cost: 2500,
         },
       ],
     })

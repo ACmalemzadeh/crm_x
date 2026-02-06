@@ -38,7 +38,7 @@ function App() {
   const [projects, setProjects] = useState<Project[]>(initialProjects)
   const [resources, setResources] = useState<Employee[]>(expandedResourcesBase)
   const [activeSection, setActiveSection] = useState<Section>('dashboard')
-  const [updates, setUpdates] = useState<UpdateEntry[]>([
+  const [updates] = useState<UpdateEntry[]>([
     {
       id: 'u-1',
       timestamp: '2026-02-06T14:30:00Z',

@@ -1,4 +1,4 @@
-import type { Lead, Contact } from '../../types'
+import type { Lead, Contact } from '../types'
 
 export function filterLeads(
   leads: Lead[],

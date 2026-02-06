@@ -275,7 +275,7 @@ export function LeadsSection({ leads, contacts, sows, phases, onUpdateLeads }: L
               </div>
 
               {/* SOW Link for Won Leads */}
-              {selectedLead.lead.stage === 'Won' && selectedLead.lead.sowId && (
+              {selectedLead.lead.phase === 'Won' && selectedLead.lead.sowId && (
                 <div className="contact-section">
                   <h4 className="section-title">Related SOW</h4>
                   <div className="related-items">

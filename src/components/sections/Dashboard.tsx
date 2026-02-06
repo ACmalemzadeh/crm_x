@@ -87,9 +87,9 @@ export function Dashboard({ sows, employees, projects, leads, contacts, updates,
     
     leads.forEach(lead => {
       const leadCost = lead.entries.reduce((sum, entry) => sum + entry.cost, 0)
-      if (leadsByPhase[lead.stage as keyof typeof leadsByPhase]) {
-        leadsByPhase[lead.stage as keyof typeof leadsByPhase].count++
-        leadsByPhase[lead.stage as keyof typeof leadsByPhase].cost += leadCost
+      if (leadsByPhase[lead.phase as keyof typeof leadsByPhase]) {
+        leadsByPhase[lead.phase as keyof typeof leadsByPhase].count++
+        leadsByPhase[lead.phase as keyof typeof leadsByPhase].cost += leadCost
       }
     })
     
@@ -124,8 +124,6 @@ export function Dashboard({ sows, employees, projects, leads, contacts, updates,
 
     // Revenue Metrics
     const totalRevenue = totalSowRevenue
-    const costPerSow = totalSowRevenue / activeSows.length
-    const costPerEmployee = employeeCost / currentEmployees.length
 
     const totalSowCost = Object.values(sowsByPhase).reduce((sum, phase) => sum + phase.cost, 0)
     const totalIncome = totalRevenue - (employeeCost + leadCost + totalSowCost)
@@ -204,7 +202,7 @@ export function Dashboard({ sows, employees, projects, leads, contacts, updates,
               leadName: lead.leadName,
               cost: leadCost,
               revenue: revenue,
-              stage: lead.stage
+              phase: lead.phase
             }
           })
           
@@ -762,8 +760,8 @@ export function Dashboard({ sows, employees, projects, leads, contacts, updates,
                           <tr key={lead.leadId}>
                             <td className="lead-name">{lead.leadName}</td>
                             <td>
-                              <span className={`stage-badge stage-${lead.stage.toLowerCase().replace(' ', '-')}`}>
-                                {lead.stage}
+                              <span className={`stage-badge stage-${lead.phase.toLowerCase().replace(' ', '-')}`}>
+                                {lead.phase}
                               </span>
                             </td>
                             <td className="cost-value">${(lead.cost / 1000).toFixed(1)}K</td>
