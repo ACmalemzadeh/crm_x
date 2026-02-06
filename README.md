@@ -2,6 +2,12 @@
 
 A modern, full-featured customer relationship management system built with React, TypeScript, and Vite. Designed for professional services firms to manage client relationships, track leads, oversee SOWs, and monitor team performance.
 
+## Recent Updates (Feb 2026)
+- Leads now use **phase** terminology (New → Qualified → Proposal → Negotiation → Won)
+- Kanban boards (Leads, SOW, Projects) support **drag-and-drop** and **phase dropdowns** to move cards
+- Kanban headers restyled to a **neutral gray** and tightened grid spacing for better density
+- Projects, SOWs, and resources share unified editing and modal enhancements
+
 ## Features
 
 ### 📊 Dashboard
@@ -61,46 +67,7 @@ A modern, full-featured customer relationship management system built with React
 - **CSS Custom Properties** - Dynamic theming system
 - **Modular Architecture** - Component-based design with clear separation of concerns
 
-## Project Structure
 
-```
-src/
-├── components/
-│   ├── sections/          # Main section components
-│   │   ├── Dashboard.tsx
-│   │   ├── ContactsSection.tsx
-│   │   ├── LeadsSection.tsx
-│   │   ├── SowSection.tsx
-│   │   ├── ProjectsSection.tsx
-│   │   └── ResourcesSection.tsx
-│   ├── ui/                # Reusable UI components
-│   │   ├── Button.tsx
-│   │   ├── Card.tsx
-│   │   ├── Chip.tsx
-│   │   ├── Input.tsx
-│   │   ├── Modal.tsx
-│   │   └── SearchBar.tsx
-│   ├── Header.tsx
-│   └── Hero.tsx
-├── data/
-│   ├── mockData.ts        # Sample data for development
-│   └── authData.ts        # Authentication mock
-├── types/
-│   ├── index.ts           # TypeScript type definitions
-│   └── auth.ts
-├── utils/
-│   ├── dataGenerator.ts   # Utility for generating test data
-│   ├── contactsFilters.ts
-│   ├── leadsFilters.ts
-│   ├── sowFilters.ts
-│   ├── projectsFilters.ts
-│   └── resourcesFilters.ts
-├── App.tsx                # Main application component
-├── App.css                # Global styles and theme
-└── main.tsx               # Application entry point
-```
-
-## Getting Started
 
 ### Prerequisites
 - Node.js 18+ and npm
